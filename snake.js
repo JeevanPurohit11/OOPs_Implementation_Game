@@ -2,9 +2,10 @@ var canvas, pen, cs, snake;
 
 function init() {
     canvas = document.getElementById("myCanvas");
+    H = W = canvas.width = canvas.height = 1000;
     pen = canvas.getContext('2d');
     cs = 66; // Reduced cell size to 10 pixels
-    H = W = canvas.width = canvas.height = 1000; // Increased canvas size to 500x500 pixels
+  
 
     snake = {
         init_len: 5,
@@ -43,9 +44,7 @@ function draw() {
 }
 
 function update() {
-    //erase the old frame..
-    pen.clearRect(0, 0, canvas.width, canvas.height);
-
+  //aold frame erasing pending .........
     snake.updateSnake();
 }
 
